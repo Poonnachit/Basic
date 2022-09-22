@@ -27,37 +27,35 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">HELLO WORLD</h5>
-                        <h1>Print</h1>
+                        <h1>Multi-line Strings</h1>
                         <p>
-                            Now what we’re going to do is teach our computer to communicate. The gift of speech is
-                            valuable: a computer can answer
-                            many questions we have about “how” or “why” or “what” it is doing. In Python, the print()
-                            function is used to tell a
-                            computer to talk. The message to be printed should be surrounded by quotes:
+                            Python strings are very flexible, but if we try to create a string that occupies multiple
+                            lines we find ourselves
+                            face-to-face with a SyntaxError. Python offers a solution: multi-line strings. By using
+                            three quote-marks (""" or ''')
+                            instead of one, we tell the program that the string doesn’t end until the next triple-quote.
+                            This method is useful if
+                            the string being defined contains a lot of quotation marks and we want to be sure we don’t
+                            close it prematurely.
                         </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        print("Hello, World!")
-        # Output: Hello, World!
+        multiple_line_string =  """
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.
+                                """
                             </code>
                         </pre>
-                        <p>
-                            The print() function prints the specified message to the screen, or other standard output
-                            device.
-
-                            The message can be a string, or any other object, the object will be converted into a string
-                            before written to the
-                            screen.
-
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lesson1_2')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
+            <a href="{{url_for('lesson1_13')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
                 Previous </a>
-            <a href="{{url_for('lesson1_4')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson1_15')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

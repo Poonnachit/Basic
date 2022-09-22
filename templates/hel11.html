@@ -27,37 +27,35 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">HELLO WORLD</h5>
-                        <h1>Print</h1>
+                        <h1>Modulo</h1>
                         <p>
-                            Now what we’re going to do is teach our computer to communicate. The gift of speech is
-                            valuable: a computer can answer
-                            many questions we have about “how” or “why” or “what” it is doing. In Python, the print()
-                            function is used to tell a
-                            computer to talk. The message to be printed should be surrounded by quotes:
+                            Python offers a companion to the division operator called the modulo operator. The modulo
+                            operator is indicated by % and
+                            gives the remainder of a division calculation. If the number is divisible, then the result
+                            of the modulo operator will
+                            be 0.
                         </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        print("Hello, World!")
-        # Output: Hello, World!
+        # Prints 4 because 29 / 5 is 5 with a remainder of 4
+        print(29 % 5)
+        
+        # Prints 2 because 32 / 3 is 10 with a remainder of 2
+        print(32 % 3)
+        
+        # Modulo by 2 returns 0 for even numbers and 1 for odd numbers
+        # Prints 0
+        print(44 % 2)
                             </code>
                         </pre>
-                        <p>
-                            The print() function prints the specified message to the screen, or other standard output
-                            device.
-
-                            The message can be a string, or any other object, the object will be converted into a string
-                            before written to the
-                            screen.
-
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lesson1_2')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
+            <a href="{{url_for('lesson1_10')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
                 Previous </a>
-            <a href="{{url_for('lesson1_4')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson1_12')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

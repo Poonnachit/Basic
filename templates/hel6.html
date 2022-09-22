@@ -27,37 +27,44 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">HELLO WORLD</h5>
-                        <h1>Print</h1>
+                        <h1>Errors</h1>
                         <p>
-                            Now what we’re going to do is teach our computer to communicate. The gift of speech is
-                            valuable: a computer can answer
-                            many questions we have about “how” or “why” or “what” it is doing. In Python, the print()
-                            function is used to tell a
-                            computer to talk. The message to be printed should be surrounded by quotes:
+                            Humans are prone to making mistakes. Humans are also typically in charge of creating
+                            computer programs. To compensate,
+                            programming languages attempt to understand and explain mistakes made in their programs.
                         </p>
-                        <pre class="mb-0">
-                            <code class="python rounded mb-0">
-        print("Hello, World!")
-        # Output: Hello, World!
-                            </code>
-                        </pre>
                         <p>
-                            The print() function prints the specified message to the screen, or other standard output
-                            device.
-
-                            The message can be a string, or any other object, the object will be converted into a string
-                            before written to the
-                            screen.
-
+                            Python refers to these mistakes as errors and will point to the location where an error
+                            occurred with a ^ character.
+                            When programs throw errors that we didn’t expect to encounter we call those errors bugs.
+                            Programmers call the process of
+                            updating the program so that it no longer produces unexpected errors debugging.
                         </p>
+                        <p>
+                            Two common errors that we encounter while writing Python are SyntaxError and NameError.
+                        </p>
+                        <ul>
+                            <li>
+                                <b>SyntaxError</b> means there is something wrong with the way your program is written —
+                                punctuation that does not belong, a
+                                command where it is not expected, or a missing parenthesis can all trigger a
+                                <b>SyntaxError</b>.
+                            </li>
+                            <li>
+                                A <b>NameError</b> occurs when the Python interpreter sees a word it does not recognize.
+                                Code
+                                that contains something that
+                                looks like a variable but was never defined will throw a <b>NameError</b>.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lesson1_2')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
+            <a href="{{url_for('lesson1_5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
                 Previous </a>
-            <a href="{{url_for('lesson1_4')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson1_7')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>
