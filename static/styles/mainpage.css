@@ -6,11 +6,29 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .fa { 
     display:inline; 
 }
-
-.navtext {
-    text-color: #537fd1;
+.main-bg {
+    background-color: #1e2f4a;
 }
 
-.allstages:hover {
-    background-color: #;
+.dark-bg {
+    background-color: #121212;
+}
+.btn-main {
+    background-color: #121212;
+    color: #fff;
+}
+.btn-main:hover {
+    background-color: #fd7e14;
+    color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.scrolled-down{
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+  transform:translateY(0); transition: all 0.3s ease-in-out;
 }

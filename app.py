@@ -130,9 +130,19 @@ def update_user(id):
 
 
 @app.route('/hel1')
-def stage1():
+def lesson1_1():
     return render_template("hel1.html")
 
 
+@app.route('/hel2')
+def lesson1_2():
+    return render_template("hel2.html")
+
+
+@app.route('/hel3')
+def lesson1_3():
+    return render_template("hel3.html")
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
