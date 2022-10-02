@@ -23,7 +23,9 @@ cursor = conn.cursor(pymysql.cursors.DictCursor)
 def home():
     return render_template("index.html")
 
-
+@app.route("/logout")
+def  logout():
+    return render_template("index.html")
 @app.route('/hel1')
 def lesson1_1():
     return render_template("hel1.html")
@@ -102,6 +104,39 @@ def lesson1_15():
 @app.route('/lab_hel1')
 def lab_hel1():
     return render_template("lab_hel1.html")
+
+@app.route('/cont1')
+def cont1():
+    return render_template("cont1.html")
+
+@app.route('/cont2')
+def cont2():
+    return render_template("cont2.html")
+
+@app.route('/cont3')
+def cont3():
+    return render_template("cont3.html")
+
+@app.route('/cont4')
+def cont4():
+    return render_template("cont4.html")
+
+@app.route('/cont5')
+def cont5():
+    return render_template("cont5.html")
+
+@app.route('/cont6')
+def cont6():
+    return render_template("cont6.html")
+
+@app.route('/cont7')
+def cont7():
+    return render_template("cont7.html")
+
+@app.route('/cont8')
+def cont8():
+    return render_template("cont8.html")
+
 
 
 if __name__ == '__main__':
