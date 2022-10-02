@@ -17,8 +17,8 @@ mysql.init_app(app)
 
 conn = mysql.connect()
 cursor = conn.cursor(pymysql.cursors.DictCursor)
- fr3few;
 
+user="wan"
 @app.route("/")
 def home():
     return render_template("index.html")
