@@ -1,3 +1,4 @@
+from cgi import test
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, session
 from flaskext.mysql import MySQL
 from flask_cors import CORS
@@ -6,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.secret_key = "mysecretkey"
-
+test
 mysql = MySQL()
 app.config['MYSQL_DATABASE_HOST'] = '34.124.203.100'
 app.config['MYSQL_DATABASE_PORT'] = 3306
