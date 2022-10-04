@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
+    <title>Lessons</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -29,14 +29,18 @@
                         <h5 class="text-gray">CONTROL FLOW</h5>
                         <h1>elif Statement</h1>
                         <p>
-                            The Python elif statement allows for continued checks to be performed after an initial if statement. 
-                            An elif statement differs from the else statement because another expression is provided to be checked,
+                            The Python elif statement allows for continued checks to be performed after an initial if
+                            statement.
+                            An elif statement differs from the else statement because another expression is provided to
+                            be checked,
                             just as with the initial if statement.
                         </p>
                         <p>
-                            If the expression is True, the indented code following the elif is executed. If the expression 
-                            evaluates to False, the code can continue to an optional else statement. Multiple elif statements 
-                            can be used following an initial if to perform a series of checks. Once an elif expression 
+                            If the expression is True, the indented code following the elif is executed. If the
+                            expression
+                            evaluates to False, the code can continue to an optional else statement. Multiple elif
+                            statements
+                            can be used following an initial if to perform a series of checks. Once an elif expression
                             evaluates to True, no further elif statements are executed.
                         </p>
                         <pre class="mb-0">
@@ -61,9 +65,10 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lab_hel1')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white" role="button">
+            <a href="{{url_for('lab', labName='lab_hel1')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+                role="button">
                 Previous </a>
-            <a href="{{url_for('cont2')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson', lessonName='cont2')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>
