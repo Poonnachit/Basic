@@ -26,25 +26,14 @@
             <div class=" card-body">
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
-                        <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>and Operator</h1>
+                        <h5 class="text-gray">LISTS</h5>
+                        <h1>Zero-Indexing</h1>
                         <p>
-                            The Python and operator performs a Boolean comparison between two Boolean values, 
-                            variables, or expressions. If both sides of the operator evaluate to True then 
-                            the and operator returns True. If either side (or both sides) evaluates to False, 
-                            then the and operator returns False. A non-Boolean value (or variable that stores a value) 
-                            will always evaluate to True when used with the and operator.
-                        </p>
-                        
+                            In Python, list index begins at zero and ends at the length of the list minus one. For example, in this list, 'Andy' is found at index 2.                        </p>
+                       
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        True and True     # Evaluates to True
-        True and False    # Evaluates to False
-        False and False   # Evaluates to False
-        1 == 1 and 1 < 2  # Evaluates to True
-        1 < 2 and 3 < 1   # Evaluates to False
-        "Yes" and 100     # Evaluates to True
-
+        names = ['Roger', 'Rafael', 'Andy', 'Novak']
                             </code>
                         </pre>
                     </div>
@@ -52,10 +41,10 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lab', labName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='list3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
-            <a href="{{url_for('lesson', lessonName='cont5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='list5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

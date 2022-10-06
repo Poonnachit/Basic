@@ -26,25 +26,26 @@
             <div class=" card-body">
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
-                        <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>and Operator</h1>
+                        <h5 class="text-gray">LISTS</h5>
+                        <h1>Modifying 2D Lists</h1>
                         <p>
-                            The Python and operator performs a Boolean comparison between two Boolean values, 
-                            variables, or expressions. If both sides of the operator evaluate to True then 
-                            the and operator returns True. If either side (or both sides) evaluates to False, 
-                            then the and operator returns False. A non-Boolean value (or variable that stores a value) 
-                            will always evaluate to True when used with the and operator.
+                            In order to modify elements in a 2D list, an index for the sublist and the index 
+                            for the element of the sublist need to be provided. The format for this is 
+                            list[sublist_index][element_in_sublist_index] = new_value.                        
                         </p>
+          
                         
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        True and True     # Evaluates to True
-        True and False    # Evaluates to False
-        False and False   # Evaluates to False
-        1 == 1 and 1 < 2  # Evaluates to True
-        1 < 2 and 3 < 1   # Evaluates to False
-        "Yes" and 100     # Evaluates to True
-
+        # A 2D list of names and hobbies
+        class_name_hobbies = [["Jenny", "Breakdancing"], ["Alexus", "Photography"], ["Grace", "Soccer"]]
+                                
+        # The sublist of Jenny is at index 0. The hobby is at index 1 of the sublist. 
+        class_name_hobbies[0][1] = "Meditation"
+        print(class_name_hobbies)
+                                
+        # Output
+        # [["Jenny", "Meditation"], ["Alexus", "Photography"], ["Grace", "Soccer"]]
                             </code>
                         </pre>
                     </div>
@@ -52,10 +53,10 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lab', labName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='list6')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
-            <a href="{{url_for('lesson', lessonName='cont5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='list8')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

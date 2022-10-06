@@ -26,25 +26,34 @@
             <div class=" card-body">
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
-                        <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>and Operator</h1>
+                        <h5 class="text-gray">LISTS</h5>
+                        <h1>List Method .pop()                        </h1>
                         <p>
-                            The Python and operator performs a Boolean comparison between two Boolean values, 
-                            variables, or expressions. If both sides of the operator evaluate to True then 
-                            the and operator returns True. If either side (or both sides) evaluates to False, 
-                            then the and operator returns False. A non-Boolean value (or variable that stores a value) 
-                            will always evaluate to True when used with the and operator.
+                            The .pop() method allows us to remove an element from a list while also returning it. 
+                            It accepts one optional input which is the index of the element to remove. 
+                            If no index is provided, then the last element in the list will be removed and returned.
                         </p>
-                        
+                       
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        True and True     # Evaluates to True
-        True and False    # Evaluates to False
-        False and False   # Evaluates to False
-        1 == 1 and 1 < 2  # Evaluates to True
-        1 < 2 and 3 < 1   # Evaluates to False
-        "Yes" and 100     # Evaluates to True
+        cs_topics = ["Python", "Data Structures", "Balloon Making", "Algorithms", "Clowns 101"]
 
+        # Pop the last element
+        removed_element = cs_topics.pop()
+                                
+        print(cs_topics)
+        print(removed_element)
+                                
+        # Output:
+        # ['Python', 'Data Structures', 'Balloon Making', 'Algorithms']
+        # 'Clowns 101'
+                                
+        # Pop the element "Baloon Making"
+        cs_topics.pop(2)
+        print(cs_topics)
+                                
+        # Output:
+        # ['Python', 'Data Structures', 'Algorithms']
                             </code>
                         </pre>
                     </div>
@@ -52,10 +61,10 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lab', labName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='list16')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
-            <a href="{{url_for('lesson', lessonName='cont5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson',lessonName='lab_list1')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

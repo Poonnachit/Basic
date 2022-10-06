@@ -26,36 +26,43 @@
             <div class=" card-body">
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
-                        <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>and Operator</h1>
+                        <h5 class="text-gray">LISTS</h5>
+                        <h1>List Method .insert()</h1>
                         <p>
-                            The Python and operator performs a Boolean comparison between two Boolean values, 
-                            variables, or expressions. If both sides of the operator evaluate to True then 
-                            the and operator returns True. If either side (or both sides) evaluates to False, 
-                            then the and operator returns False. A non-Boolean value (or variable that stores a value) 
-                            will always evaluate to True when used with the and operator.
+                            The Python list method .insert() allows us to add an element to a specific index in a list.
                         </p>
-                        
+                        <p>
+                            It takes in two inputs :
+                        </p>
+                        <ul>
+                            <li> The index that you want to insert into.</li>
+                            <li> The element that you want to insert at the specified index.</li>
+                        </ul>
+
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-        True and True     # Evaluates to True
-        True and False    # Evaluates to False
-        False and False   # Evaluates to False
-        1 == 1 and 1 < 2  # Evaluates to True
-        1 < 2 and 3 < 1   # Evaluates to False
-        "Yes" and 100     # Evaluates to True
-
+        # Here is a list representing a line of people at a store
+        store_line = ["Karla", "Maxium", "Martim", "Isabella"]
+                                
+        # Here is how to insert "Vikor" after "Maxium" and before "Martim"
+        store_line.insert(2, "Vikor")
+                                
+        print(store_line) 
+        # Output: ['Karla', 'Maxium', 'Vikor', 'Martim', 'Isabella']
                             </code>
                         </pre>
+                        <p>Specifically, these two values are of the bool type. Since booleans are a data type, 
+                           creating a variable that holds a boolean value is the same as with other data types.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lab', labName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson', lessonName='list15')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
-            <a href="{{url_for('lesson', lessonName='cont5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson', lessonName='list17')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>
