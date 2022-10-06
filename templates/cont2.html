@@ -27,21 +27,37 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>or Operator</h1>
+                        <h1>elif Statement</h1>
                         <p>
-                            The Python or operator combines two Boolean expressions and evaluates to True
-                            if at least one of the expressions returns True. Otherwise, if both expressions
-                            are False, then the entire expression evaluates to False.
+                            The Python elif statement allows for continued checks to be performed after an initial if
+                            statement.
+                            An elif statement differs from the else statement because another expression is provided to
+                            be checked,
+                            just as with the initial if statement.
                         </p>
-
+                        <p>
+                            If the expression is True, the indented code following the elif is executed. If the
+                            expression
+                            evaluates to False, the code can continue to an optional else statement. Multiple elif
+                            statements
+                            can be used following an initial if to perform a series of checks. Once an elif expression
+                            evaluates to True, no further elif statements are executed.
+                        </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-                True or True      # Evaluates to True
-                True or False     # Evaluates to True
-                False or False    # Evaluates to False
-                1 < 2 or 3 < 1    # Evaluates to True
-                3 < 1 or 1 > 6    # Evaluates to False
-                1 == 1 or 1 < 2   # Evaluates to True
+            # elif Statement
+
+            pet_type = "fish"
+
+            if pet_type == "dog":
+                print("You have a dog.")
+            elif pet_type == "cat":
+                print("You have a cat.")
+            elif pet_type == "fish":
+                # this is performed
+                print("You have a fish")
+            else:
+                print("Not sure!")
                             </code>
                         </pre>
                     </div>
@@ -49,7 +65,7 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lesson', lessonName='cont1')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lab', labName='cont1')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
             <a href="{{url_for('lesson', lessonName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"

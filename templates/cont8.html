@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div class="container mt-5 mb-5">
+        <div class="card mt-5 p-5 main-bg shadow-lg border-white text-white" id="main">
+            <div class=" card-body">
+                <div class="card p-5 bg-warning shadow-lg border-white text-dark">
+                    <div class=" card-body">
+                        <h5 class="text-gray">CONTROL FLOW</h5>
+                        <h1>Not Equals Operator !=</h1>
+                        <p>
+                            The Python not equals operator, !=, is used to compare two values, variables or expressions
+                            to determine if they are NOT the same. If they are NOT the same, the operator returns True.
+                            If they are the same, then it returns False.
+                        </p>
+                        <p>
+                            The operator takes the data type into account when making the comparison so a value of 10
+                            would NOT be equal to the string value "10" and the operator would return True. If
+                            expressions
+                            are used, then they are evaluated to a value of True or False before the comparison is made
+                            by the operator.
+                        </p>
+
+                        <pre class="mb-0">
+                            <code class="python rounded mb-0">
+            # Not Equals Operator
+
+            if "Yes" != "No":
+                # evaluates to True
+                print("They are NOT equal")
+                                
+            val1 = 10
+            val2 = 20
+                                
+            if val1 != val2:
+                print("They are NOT equal")
+                                
+            if (10 > 1) != (10 > 1000):
+                # True != False
+                print("They are NOT equal")
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between mx-2">
+            <a href="{{url_for('lesson', lessonName='cont7')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+                role="button">
+                Previous </a>
+            <a href="{{url_for('lesson', lessonName='cont9')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+                role="button">Next</a>
+        </div>
+    </div>
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var codeElement = document.getElementById('python_code');
+        // Add code mirror class for coloring (default is the theme)
+        codeElement.classList.add('cm-s-default');
+        var code = codeElement.innerText;
+
+        codeElement.innerHTML = "";
+
+        CodeMirror.runMode(
+            code,
+            'python',
+            codeElement
+        );
+    };
+</script>
+
+</html>

@@ -27,32 +27,21 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>Comparison Operators</h1>
+                        <h1>or Operator</h1>
                         <p>
-                            In Python, relational operators compare two values or expressions. The most common ones are:
+                            The Python or operator combines two Boolean expressions and evaluates to True
+                            if at least one of the expressions returns True. Otherwise, if both expressions
+                            are False, then the entire expression evaluates to False.
+                        </p>
 
-                        </p>
-                        <ul>
-                            <li>
-                                < less than </li>
-                            <li> > greater than </li>
-                            <li>
-                                <= less than or equal to </li>
-                            <li> >= greater than or equal too </li>
-                        </ul>
-                        <p>
-                            If the relation is sound, then the entire expression will evaluate to True. If not, the
-                            expression evaluates to False.
-                        </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-            a = 2
-            b = 3
-            a < b  # evaluates to True
-            a > b  # evaluates to False
-            a >= b # evaluates to False
-            a <= b # evaluates to True
-            a <= a # evaluates to True
+                True or True      # Evaluates to True
+                True or False     # Evaluates to True
+                False or False    # Evaluates to False
+                1 < 2 or 3 < 1    # Evaluates to True
+                3 < 1 or 1 > 6    # Evaluates to False
+                1 == 1 or 1 < 2   # Evaluates to True
                             </code>
                         </pre>
                     </div>

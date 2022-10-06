@@ -27,33 +27,40 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>if Statement</h1>
+                        <h1>Equal Operator ==</h1>
                         <p>
-                            The Python if statement is used to determine the execution of code based on the evaluation
-                            of a Boolean expression.
+                            The equal operator, ==, is used to compare two values, variables or expressions
+                            to determine if they are the same.
                         </p>
-                        <ul>
-                            <li> If the if statement expression evaluates to True, then the indented code following the
-                                statement is executed.</li>
-                            <li> If the expression evaluates to False then the indented code following the if statement
-                                is skipped and the program
-                                executes the next line of code which is indented at the same level as the if statement.
-                            </li>
+                        <p>
+                            If the values being compared are the same, the operator returns True, otherwise it returns
+                            False.
+                        </p>
+                        <p>
+                            The operator takes the data type into account when making the comparison, so a string value
+                            of "2"
+                            is not considered the same as a numeric value of 2.
+                        </p>
 
-                        </ul>
-                        <p>
-                            If the relation is sound, then the entire expression will evaluate to True. If not, the
-                            expression evaluates to False.
-                        </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-            a = 2
-            b = 3
-            a < b  # evaluates to True
-            a > b  # evaluates to False
-            a >= b # evaluates to False
-            a <= b # evaluates to True
-            a <= a # evaluates to True
+            # Equal operator
+
+            if 'Yes' == 'Yes':
+                # evaluates to True
+                print('They are equal')
+                                
+            if (2 > 1) == (5 < 10):
+                # evaluates to True
+                print('Both expressions give the same result')
+                                
+            c = '2'
+            d = 2
+                                
+            if c == d:
+                print('They are equal')
+            else:
+                print('They are not equal')
                             </code>
                         </pre>
                     </div>
@@ -64,7 +71,7 @@
             <a href="{{url_for('lesson', lessonName='cont6')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
-            <a href="{{url_for('lesson', lessonName='cont7')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lesson', lessonName='cont8')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">Next</a>
         </div>
     </div>

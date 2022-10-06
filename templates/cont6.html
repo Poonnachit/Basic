@@ -27,36 +27,21 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>if Statement</h1>
+                        <h1>not Operator</h1>
                         <p>
-                            The Python if statement is used to determine the execution of code based on the evaluation
-                            of a Boolean expression.
+                            The Python Boolean not operator is used in a Boolean expression in order 
+                            to evaluate the expression to its inverse value. If the original expression was True, 
+                            including the not operator would make the expression False, and vice versa.
                         </p>
-                        <ul>
-                            <li> If the if statement expression evaluates to True, then the indented code following the
-                                statement is executed.</li>
-                            <li> If the expression evaluates to False then the indented code following the if statement
-                                is skipped and the program
-                                executes the next line of code which is indented at the same level as the if statement.
-                            </li>
-
-                        </ul>
 
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-            # if Statement
-
-            test_value = 100
-                                
-            if test_value > 1:
-                # Expression evaluates to True
-                print("This code is executed!")
-                                
-            if test_value > 1000:
-                # Expression evaluates to False
-                print("This code is NOT executed!")
-                                
-            print("Program continues at this point.")
+            not True     # Evaluates to False
+            not False    # Evaluates to True
+            1 > 2        # Evaluates to False
+            not 1 > 2    # Evaluates to True
+            1 == 1       # Evaluates to True
+            not 1 == 1   # Evaluates to False
                             </code>
                         </pre>
                     </div>

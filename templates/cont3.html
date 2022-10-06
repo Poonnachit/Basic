@@ -27,40 +27,36 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>Equal Operator ==</h1>
+                        <h1>else Statement</h1>
                         <p>
-                            The equal operator, ==, is used to compare two values, variables or expressions
-                            to determine if they are the same.
-                        </p>
-                        <p>
-                            If the values being compared are the same, the operator returns True, otherwise it returns
-                            False.
-                        </p>
-                        <p>
-                            The operator takes the data type into account when making the comparison, so a string value
-                            of "2"
-                            is not considered the same as a numeric value of 2.
-                        </p>
+                            The Python else statement provides alternate code to execute if the expression 
+                            in an if statement evaluates to False.
 
+                        </p>
+                    
+                        <p>
+                            The indented code for the if statement is executed if the expression evaluates to True. 
+                            The indented code immediately following the else is executed only if the expression 
+                            evaluates to False. To mark the end of the else block, the code must be unindented to 
+                            the same level as the starting if line.
+                        </p>
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-            # Equal operator
+            # else Statement
 
-            if 'Yes' == 'Yes':
-                # evaluates to True
-                print('They are equal')
+            test_value = 50
                                 
-            if (2 > 1) == (5 < 10):
-                # evaluates to True
-                print('Both expressions give the same result')
-                                
-            c = '2'
-            d = 2
-                                
-            if c == d:
-                print('They are equal')
+            if test_value < 1:
+                print("Value is < 1")
             else:
-                print('They are not equal')
+                print("Value is >= 1")
+                                
+            test_string = "VALID"
+                                
+            if test_string == "NOT_VALID":
+                print("String equals NOT_VALID")
+            else:
+                print("String equals something else!")
                             </code>
                         </pre>
                     </div>

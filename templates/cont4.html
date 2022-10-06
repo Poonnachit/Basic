@@ -27,37 +27,24 @@
                 <div class="card p-5 bg-warning shadow-lg border-white text-dark">
                     <div class=" card-body">
                         <h5 class="text-gray">CONTROL FLOW</h5>
-                        <h1>Not Equals Operator !=</h1>
+                        <h1>and Operator</h1>
                         <p>
-                            The Python not equals operator, !=, is used to compare two values, variables or expressions
-                            to determine if they are NOT the same. If they are NOT the same, the operator returns True.
-                            If they are the same, then it returns False.
+                            The Python and operator performs a Boolean comparison between two Boolean values, 
+                            variables, or expressions. If both sides of the operator evaluate to True then 
+                            the and operator returns True. If either side (or both sides) evaluates to False, 
+                            then the and operator returns False. A non-Boolean value (or variable that stores a value) 
+                            will always evaluate to True when used with the and operator.
                         </p>
-                        <p>
-                            The operator takes the data type into account when making the comparison so a value of 10
-                            would NOT be equal to the string value "10" and the operator would return True. If
-                            expressions
-                            are used, then they are evaluated to a value of True or False before the comparison is made
-                            by the operator.
-                        </p>
-
+                        
                         <pre class="mb-0">
                             <code class="python rounded mb-0">
-            # Not Equals Operator
+            True and True     # Evaluates to True
+            True and False    # Evaluates to False
+            False and False   # Evaluates to False
+            1 == 1 and 1 < 2  # Evaluates to True
+            1 < 2 and 3 < 1   # Evaluates to False
+            "Yes" and 100     # Evaluates to True
 
-            if "Yes" != "No":
-                # evaluates to True
-                print("They are NOT equal")
-                                
-            val1 = 10
-            val2 = 20
-                                
-            if val1 != val2:
-                print("They are NOT equal")
-                                
-            if (10 > 1) != (10 > 1000):
-                # True != False
-                print("They are NOT equal")
                             </code>
                         </pre>
                     </div>
@@ -65,7 +52,7 @@
             </div>
         </div>
         <div class="row justify-content-between mx-2">
-            <a href="{{url_for('lesson', lessonName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+            <a href="{{url_for('lab', labName='cont3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
                 role="button">
                 Previous </a>
             <a href="{{url_for('lesson', lessonName='cont5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
