@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div class="container mt-5 mb-5">
+        <div class="card mt-5 p-5 main-bg shadow-lg border-white text-white" id="main">
+            <div class=" card-body">
+                <div class="card p-5 bg-warning shadow-lg border-white text-dark">
+                    <div class=" card-body">
+                        <h5 class="text-gray">MODULES</h5>
+                        <h1>random.randint() and random.choice()</h1>
+                        <p>
+                            In Python, the random module offers methods to simulate non-deterministic 
+                            behavior in selecting a random number from a range and choosing a random item from a list.
+                        </p>
+                        <p>
+                            The randint() method provides a uniform random selection from a range of integers. 
+                            The choice() method provides a uniform selection of a random element from a sequence.
+                        </p>
+                        <pre class="mb-0">
+                            <code class="python rounded mb-0">
+        # Returns a random integer N in a given range, such that start <= N <= end
+        # random.randint(start, end)
+        r1 = random.randint(0, 10)  
+        print(r1) # Random integer where 0 <= r1 <= 10
+                                
+        # Prints a random element from a sequence
+        seq = ["a", "b", "c", "d", "e"]
+        r2 = random.choice(seq)
+        print(r2) # Random element in the sequence
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between mx-2">
+            <a href="{{url_for('lesson',lessonName='modu3')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+                role="button">
+                Previous </a>
+            <a href="{{url_for('lesson',lessonName='modu5')}}#main" class="btn btn-main btn-lg mt-5 col-3 border-white"
+                role="button">Next</a>
+        </div>
+    </div>
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var codeElement = document.getElementById('python_code');
+        // Add code mirror class for coloring (default is the theme)
+        codeElement.classList.add('cm-s-default');
+        var code = codeElement.innerText;
+
+        codeElement.innerHTML = "";
+
+        CodeMirror.runMode(
+            code,
+            'python',
+            codeElement
+        );
+    };
+</script>
+
+</html>
