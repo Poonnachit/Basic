@@ -127,6 +127,7 @@ def lab(lab_id):
         """
         cursor.execute(sql, (session['id'], lab_id))
         data_user = cursor.fetchone()
+        basic_user_ln_lab_id = data_user["basic_user_ln_lab_id"]
         if data_user:
             sql = """
             UPDATE basic_user_ln_lab
@@ -151,6 +152,11 @@ def lab(lab_id):
         desc = data['basic_lab_description']
         filename = data['basic_lab_file_name']
 
+        sql = """
+        SELECT * FROM basic_user_lab_file WHERE basic_user_ln_lab_id = %s
+        """
+        cursor.execute(sql, (basic_user_ln_lab_id))
+        submission_data = cursor.fetchall()
         if request.method == "POST":
 
             UPLOAD_FOLDER = '/home/BUU/64160038/Basic/uploads/user'
@@ -177,7 +183,6 @@ def lab(lab_id):
                 """
                 cursor.execute(sql, (user_ln_lab_id, filename))
                 conn.commit()
-            filename.replace("", ".py")
             file_exists = exists(file_path)
             if file_exists:
                 sql = """
@@ -195,14 +200,16 @@ def lab(lab_id):
                 UPDATE basic_user_lab_file 
                 SET basic_user_lab_score = %s
                 WHERE basic_user_ln_lab_id = %s
+                AND basic_user_lab_file_path = %s
                 """
-                score = int((passed_testcase/all_testcase)*100)
-                cursor.execute(sql, (score, user_ln_lab_id))
+                print(filename)
+                score = str((passed_testcase/all_testcase)*100)
+                cursor.execute(sql, (score, user_ln_lab_id, filename))
                 conn.commit()
                 return redirect(url_for('lab', lab_id=lab_id))
             flash("File not found")
             return redirect(request.url)
-        return render_template("lab.html", name=name, desc=desc, filename=filename, user_ln_lab_id=data_user['basic_user_ln_lab_id'])
+        return render_template("lab.html", name=name, desc=desc, filename=filename,submission=submission_data , user_ln_lab_id=data_user['basic_user_ln_lab_id'])
     return redirect(url_for("login"))
 
 
