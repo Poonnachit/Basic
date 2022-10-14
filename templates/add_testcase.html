@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <div class="card p-5 mt-5">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <h1 class="text-center mb-3">Add TestCase</h1>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show mb-2 mt-2" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+                <form method="POST"" enctype=multipart/form-data>
+                <div class=" row">
+                    <div class="mb-3 col-6">
+                        <label for="formFile" class="form-label">INPUT #1</label>
+                        <input class="form-control" type="file" id="formFile" name="fileinput1" required>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="formFile" class="form-label">OUTPUT #1</label>
+                        <input class="form-control" type="file" id="formFile" name="fileoutput1" required>
+                    </div>
+            </div>
+            <div class="row" id="add_more">
+                <div class="mb-3 col-6">
+                    <button id="add_more_testcase" type="button" class="btn btn-success w-100"><i
+                            class="fa-sharp fa-solid fa-plus"></i></button>
+                </div>
+                <div class="mb-3 col-6">
+                    <button id="decrease_more_testcase" type="button" class="btn btn-danger w-100"><i
+                            class="fa-sharp fa-solid fa-minus"></i></button>
+                </div>
+            </div>
+
+            <input id="no" value="1" name="no_testcase" hidden>
+            <input id="lab_id" value="{{lab_id}}" name="lab_id" hidden>
+            <div class="d-grid my-2">
+                <button class="btn btn-primary btn-lg" type="submit">Add Lab</button>
+            </div>
+            </form>
+        </div>
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    testcase_no = 1;
+    $("#add_more_testcase").click(function () {
+        console.log('add')
+        testcase_no++;
+        var html = `<div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="formFile" class="form-label">INPUT #`+ testcase_no + `</label>
+                            <input class="form-control" type="file" id="formFile" name="fileinput`+ testcase_no + `" required>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="formFile" class="form-label">OUTPUT #`+ testcase_no + `</label>
+                            <input class="form-control" type="file" id="formFile" name="fileoutput`+ testcase_no + `" required>
+                        </div>
+                    </div>`;
+        $(html).insertBefore("#add_more");
+        $("#no").val(testcase_no);
+    }
+    );
+    $("#decrease_more_testcase").click(function () {
+        console.log('decrease')
+        if (testcase_no > 1) {
+            testcase_no--;
+            $("#add_more").prev().remove();
+            $("#no").val(testcase_no);
+        }
+    }
+    );
+</script>
+
+</html>

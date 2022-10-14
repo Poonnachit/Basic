@@ -34,13 +34,13 @@
                                 {% endwith %}
                             </div>
                         </div>
-                        <form method="POST" action="{{url_for('action_login')}}">
+                        <form method="POST" action="{{url_for('login')}}">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col">
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" required
-                                            maxlength="15">
+                                            maxlength="30">
                                     </div>
                                 </div>
                             </div>
