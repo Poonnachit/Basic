@@ -20,35 +20,49 @@
     <div class="container-fluid mt-1 mb-5">
         <div class="card p-5 bg-gray shadow-lg border-white text-dark" id="main">
             <div class="card-body">
-                <h1 class="card-title">{{name}}</h1>
-                <p class="card-text">{{desc}}</p>
-                <table id="example" class="table table-striped" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Lab Name</th>
-                            <th>Lab Description</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for data in datas %}
-                        <tr>
-                            <td>{{data.basic_lab_name}}</td>
-                            <td>{{data.basic_lab_description}}</td>
-                            <td>
-                                <a href="{{url_for('add_testcase',lab_id=data.basic_lab_id)}}">add_testcase</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Lab Name</th>
-                            <th>Lab Description</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                <h1 class="card-title text-center">All Labs</h1>
+                <div class="row">
+                    <div class="col-12 text-end">
+                        <a href="{{ url_for('create_lab') }}" class="justify-content-end">
+                            <button class="btn btn-primary col-2 btn-lg mb-4">Create Lab</button>
+                        </a>
+                    </div>
+                    <table id="example" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Lab Name</th>
+                                <th>Lab Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in range(datas | length) %}
+                            <tr>
+                                <td>{{ i+1 }}</td>
+                                <td>{{ datas[i].basic_lab_name }}</td>
+                                <td class="w-50">{{ datas[i].basic_lab_description }}</td>
+                                <td>
+                                    <a href="{{ url_for('update_lab',lab_id=datas[i].basic_lab_id) }}">
+                                        <button class="btn btn-primary btn-sm">Edit</button>
+                                    </a>
+                                    <a href="{{ url_for('add_testcase',lab_id=datas[i].basic_lab_id) }}">
+                                        <button class="btn btn-primary btn-sm">Testcase</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>No.</th>
+                                <th>Lab Name</th>
+                                <th>Lab Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </div>
 </body>

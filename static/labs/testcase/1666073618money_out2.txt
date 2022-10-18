@@ -1,0 +1,4 @@
+10 baht = 0
+5 baht = 1
+2 baht = 0
+1 baht = 1

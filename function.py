@@ -2,10 +2,9 @@
 import subprocess
 import filecmp
 
-def grading_system(input,output ,fileName, fileLocation):
-
+def grading_system(inputt,output ,fileName, fileLocation):
     write_path = "/home/BUU/64160038/Basic/uploads/output/"+fileName+".txt"
-    testcase_path = "/home/BUU/64160038/Basic/static/labs/testcase/"+input
+    testcase_path = "/home/BUU/64160038/Basic/static/labs/testcase/"+inputt
     answer_path = "/home/BUU/64160038/Basic/static/labs/testcase/"+output
     with open(write_path, "w+") as output, open(testcase_path, "r") as testcase:
         subprocess.call(["python3", fileLocation], stdin=testcase, stdout=output, stderr=output, timeout=2)
